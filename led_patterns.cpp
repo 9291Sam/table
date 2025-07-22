@@ -186,7 +186,7 @@ void colorWave(LEDWriter& writer, float timeAlive)
     const size_t numberOfLEDS = writer.getNumberOfLEDS();
     for (int i = 0; i < numberOfLEDS; i++)
     {
-        const uint8_t hue = (sinf(timeAlive * 32 + float(i) / 32.0) * 0.5f + 0.5f) * 255.0f;
+        const uint8_t hue = (sinf(timeAlive * 2 + float(i) / 32.0) * 0.5f + 0.5f) * 255.0f;
         writer.writeLED(i, CHSV(hue, 255, 255));
     }
 }
